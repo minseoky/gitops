@@ -10,7 +10,6 @@ spec:
     targetRevision: prod
     path: istio-system/istio
     kustomize:
-      enableHelm: true
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-system

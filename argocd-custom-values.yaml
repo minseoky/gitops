@@ -1,0 +1,10 @@
+server:
+  service:
+    type: LoadBalancer
+
+configs:
+  cm:
+    kustomize.buildOptions: "--enable-helm"
+
+application-controller:
+  enabled: true
