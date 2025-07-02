@@ -23,3 +23,8 @@ spec:
     name: istio-validator-istio-system
     jsonPointers:
     - /webhooks/0/failurePolicy
+  - group: admissionregistration.k8s.io
+    kind: ValidatingWebhookConfiguration
+    name: istio-validator-istio-system
+    jsonPointers:
+    - /webhooks/0/clientConfig/caBundle
