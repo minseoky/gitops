@@ -5,6 +5,7 @@ ArgoCD를 통해 클러스터 상태를 지속적으로 동기화하며, Helm과
 
 ## 📁 디렉토리 구조
 
+```
 .
 ├── argocd/                         # ArgoCD 자체를 GitOps로 관리
 │   ├── argocd/                     # ArgoCD Application 리소스 정의
@@ -20,6 +21,7 @@ ArgoCD를 통해 클러스터 상태를 지속적으로 동기화하며, Helm과
 │       ├── namespace.yaml
 │       └── values.yaml
 └── kustomization.yaml              # 최상위 Kustomize 진입점
+```
 
 ## 🚀 배포 방식
 
