@@ -49,9 +49,14 @@ kubectl apply -k gitops/
 kubectl apply -k .
 ```
 
+## 🦎 배포 확인 방법
 
-## ❗주의사항
+```bash
+sh check
+```
+
+## ❗주의/참고사항
 
 - `argocd-custom-values.yaml`의 변경 사항은 ArgoCD가 자동 반영하지 않으므로 `helm upgrade`를 별도로 수행하거나 HelmOperator 등을 사용하는 방법 고려 필요
 - ArgoCD가 자기 자신을 관리하려면 최소 한 번은 수동으로 부트스트랩 해야 함
-
+- istio 배포시 특정 필드가 git의 상태와 매번 달라져서 OutOfSync 사태가 발생합니다. 이를 해결하기 위해, istio의 application.yaml에 ignoreDifferences 설정을 추가하였습니다.
