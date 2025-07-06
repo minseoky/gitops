@@ -1,4 +1,6 @@
 controller:
+  runAsUser: 1000
+  fsGroup: 1000
   image:
     repository: jenkins/jenkins
     tag: 2.440.1-jdk21
