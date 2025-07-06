@@ -1,0 +1,21 @@
+controller:
+  adminUser: admin
+  adminPassword: secret
+  serviceType: LoadBalancer
+  servicePort: 80
+  ingress:
+    enabled: false
+  serviceAccount:
+    create: false
+    name: jenkins
+agent:
+  enabled: true
+  kubernetes:
+    namespace: jenkins
+    defaultPodTemplate:
+      label: jenkins-agent
+      containers:
+        - name: jnlp
+          image: jenkins/inbound-agent:latest
+      # 필요 시 리소스 설정
+      defaultContainer: jnlp

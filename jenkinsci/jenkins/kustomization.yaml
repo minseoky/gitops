@@ -1,0 +1,15 @@
+# jenkinsci/jenkins/kustomization.yaml
+namespace: jenkins
+
+resources:
+  - namespace.yaml
+  - jenkins-sa.yaml
+  - jenkins-rbac.yaml
+
+helmCharts:
+  - name: jenkins
+    repo: https://charts.jenkins.io
+    version: 4.7.4          # 원하는 버전으로 지정
+    releaseName: jenkins
+    namespace: jenkins
+    valuesFile: values.yaml
