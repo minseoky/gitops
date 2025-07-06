@@ -1,4 +1,6 @@
 controller:
+  image:
+    tag: "2.452.1-jdk17"
   adminUser: admin
   adminPassword: secret
   serviceType: LoadBalancer
