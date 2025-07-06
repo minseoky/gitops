@@ -1,6 +1,6 @@
 controller:
   image:
-    repository: jenkins/jenkins
+    repository: jenkinsci/jenkins
     tag: 2.452.1-jdk17
   admin:
     username: admin
