@@ -2,8 +2,9 @@ controller:
   image:
     repository: jenkins/jenkins
     tag: 2.452.1-jdk17
-  adminUser: admin
-  adminPassword: secret
+  admin:
+    username: admin
+    password: admin1234
   serviceType: LoadBalancer
   servicePort: 80
   ingress:
