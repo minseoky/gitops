@@ -6,7 +6,7 @@ controller:
   ingress:
     enabled: false
   serviceAccount:
-    create: true
+    create: false
     name: jenkins
 agent:
   enabled: true
