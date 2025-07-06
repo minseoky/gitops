@@ -1,6 +1,7 @@
 controller:
-  image: jenkins/jenkins
-  tag: 2.452.1-jdk17
+  image:
+    repository: jenkins/jenkins
+    tag: 2.452.1-jdk17  
   adminUser: admin
   adminPassword: secret
   serviceType: LoadBalancer
