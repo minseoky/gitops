@@ -1,7 +1,9 @@
 controller:
   image:
-    repository: jenkinsci/jenkins
-    tag: 2.452.1-jdk17
+    repository: jenkins/jenkins
+    tag: 2.440.1-jdk21
+    tagLabel: jdk21
+    pullPolicy: "Always"
   admin:
     username: admin
     password: admin1234
