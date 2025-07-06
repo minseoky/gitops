@@ -11,7 +11,7 @@ controller:
     create: false
     name: jenkins
   persistence:
-    enabled: true:
+    enabled: true
     storageClass: common-nfs
     size: 8Gi
 agent:
