@@ -29,6 +29,6 @@ agent:
       label: jenkins-agent
       containers:
         - name: jnlp
-          image: jenkins/inbound-agent:latest
+          image: jenkins/inbound-agent:2.466.1-jdk21
       # 필요 시 리소스 설정
       defaultContainer: jnlp
