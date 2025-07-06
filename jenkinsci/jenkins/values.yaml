@@ -8,6 +8,10 @@ controller:
   serviceAccount:
     create: false
     name: jenkins
+  persistence:
+    enabled: true:
+    storageClass: common-nfs
+    size: 8Gi
 agent:
   enabled: true
   kubernetes:
