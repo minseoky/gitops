@@ -3,6 +3,11 @@ controller:
     repository: jenkins/jenkins
     tag: lts-jdk21
   installPlugins:
-    - configuration-as-code:1963.v24e046127a_3f
-    - git:5.7.0
-    - git-client:6.2.0
+    - configuration-as-code:1648.vf984305a_ef4c
+    - git:5.2.1
+    - git-client:4.4.0
+    - matrix-auth:3.1.6
+    - workflow-aggregator:2.6
+    - credentials:1144.v94a_20b_d6e5f8
+    - ssh-credentials:305.v8f4381501156
+    - plain-credentials:139.v3b_64a_c9f6a_7b
