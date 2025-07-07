@@ -14,15 +14,6 @@ metadata:
 spec:
   gatewayClassName: istio
   listeners:
-    - name: https
-      port: 443
-      protocol: HTTPS
-      hostname: "jenkins.minseoky.me"
-      tls:
-        mode: Terminate
-        certificateRefs:
-          - name: jenkins-cert
-            kind: Secret
     - name: http
       port: 80
       protocol: HTTP

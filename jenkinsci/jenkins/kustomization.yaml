@@ -4,7 +4,6 @@ namespace: jenkins
 resources:
   - namespace.yaml
   - gateway.yaml
-  - tls-cert.yaml
 
 helmCharts:
   - name: jenkins
