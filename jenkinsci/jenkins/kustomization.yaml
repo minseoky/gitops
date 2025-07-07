@@ -7,7 +7,7 @@ resources:
 helmCharts:
   - name: jenkins
     repo: https://charts.jenkins.io
-    version: 5.8.66       # 원하는 버전으로 지정
+    version: 5.8.6
     releaseName: jenkins
     namespace: jenkins
     valuesFile: values.yaml
