@@ -1,3 +1,4 @@
 controller:
   image:
-    tag: "2.517-jdk21"
+    repository: jenkins/jenkins
+    tag: 2.466.1
