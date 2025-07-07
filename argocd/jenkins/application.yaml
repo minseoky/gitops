@@ -10,7 +10,6 @@ spec:
     targetRevision: prod               # prod 브랜치에서 동작한다면 그대로 유지
     path: jenkins                      # base는 kustomization.yaml에서 이미 포함됨
     kustomize:
-      buildOptions: "--enable-helm"    # ⬅️ 핵심: helmCharts 인식하도록 설정
   destination:
     server: https://kubernetes.default.svc
     namespace: jenkins
