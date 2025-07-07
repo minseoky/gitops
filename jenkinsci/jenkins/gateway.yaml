@@ -32,6 +32,12 @@ spec:
         - path:
             type: PathPrefix
             value: /
+      filters:
+        - type: RequestHeaderModifier
+          requestHeaderModifier:
+            remove:
+              - "Upgrade"
+              - "Connection"
       backendRefs:
         - name: jenkins
           port: 8080
