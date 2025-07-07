@@ -5,7 +5,7 @@ controller:
   serviceType: LoadBalancer
   servicePort: 8080
   targetPort: 8080
-  jenkinsOpts: "--httpPort=8080 --httpsPort=-1"
+  nodePort: 30080
 
   installPlugins: []
 
