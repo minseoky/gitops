@@ -1,9 +1,0 @@
-# istio-system/istio/gateway-values.yaml
-controller:
-  name: istio-gateway-controller
-
-service:
-  type: LoadBalancer
-
-gateway:
-  enabled: true
