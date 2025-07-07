@@ -6,6 +6,7 @@ resources:
 
 helmCharts:
   - name: jenkins
+    chart: jenkins
     repo: https://charts.jenkins.io
     version: 5.8.6
     releaseName: jenkins
