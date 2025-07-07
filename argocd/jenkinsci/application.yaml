@@ -10,6 +10,7 @@ spec:
     repoURL: https://github.com/minseoky/gitops
     targetRevision: HEAD
     path: jenkinsci/jenkins
+    kustomize:
   destination:
     server: https://kubernetes.default.svc
     namespace: jenkins
