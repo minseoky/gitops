@@ -19,7 +19,7 @@ spec:
       protocol: HTTPS
       hostname: "jenkins.minseoky.me"
       tls:
-        mode: TERMINATE
+        mode: Terminate
         certificateRefs:
           - name: jenkins-cert
             kind: Secret
