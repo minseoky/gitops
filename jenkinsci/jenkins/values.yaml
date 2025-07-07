@@ -1,0 +1,3 @@
+controller:
+  image:
+    tag: "2.517-jdk21"
