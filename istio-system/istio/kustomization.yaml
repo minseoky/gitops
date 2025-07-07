@@ -11,5 +11,12 @@ helmCharts:
     namespace: istio-system
     valuesFile: values.yaml
 
+  - name: gateway
+    repo: https://istio-release.storage.googleapis.com/charts
+    version: 1.22.0
+    releaseName: istio-ingress
+    namespace: istio-system
+    valuesFile: gateway-values.yaml
+
 resources:
   - namespace.yaml
