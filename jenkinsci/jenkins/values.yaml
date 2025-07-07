@@ -2,3 +2,4 @@ controller:
   image:
     repository: jenkins/jenkins
     tag: lts-jdk21
+  pluginCompatibilityStrategy: LATEST
