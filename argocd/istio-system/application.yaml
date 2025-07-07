@@ -41,5 +41,5 @@ spec:
     namespace: istio-system
     name: istiod
     jsonPointers:
+    - /spec/template/spec/containers/0/env/9/valueFrom/resourceFieldRef/divisor
     - /spec/template/spec/containers/0/env/10/valueFrom/resourceFieldRef/divisor
-    - /spec/template/spec/containers/0/env/11/valueFrom/resourceFieldRef/divisor
