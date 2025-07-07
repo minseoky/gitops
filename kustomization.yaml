@@ -1,3 +1,4 @@
 resources:
   - argocd/argocd/application.yaml
   - argocd/istio-system/application.yaml
+  - argocd/jenkins/application.yaml
