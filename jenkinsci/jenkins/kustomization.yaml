@@ -3,6 +3,7 @@ namespace: jenkins
 
 resources:
   - namespace.yaml
+  - gateway.yaml
 
 helmCharts:
   - name: jenkins
