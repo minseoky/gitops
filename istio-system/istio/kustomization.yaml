@@ -20,3 +20,4 @@ helmCharts:
 
 resources:
   - namespace.yaml
+  - gateway-api-crds.yaml
