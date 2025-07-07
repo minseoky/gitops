@@ -3,7 +3,6 @@ namespace: jenkins
 
 resources:
   - namespace.yaml
-  - jenkins-rbac.yaml
 
 helmCharts:
   - name: jenkins
