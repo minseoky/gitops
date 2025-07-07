@@ -25,6 +25,7 @@ spec:
       - RespectIgnoreDifferences=true
       - Replace=true
       - AddOwnerRef=true
+      - PruneLast=true
   ignoreDifferences:
   - group: admissionregistration.k8s.io
     kind: ValidatingWebhookConfiguration
