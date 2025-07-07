@@ -4,3 +4,5 @@ controller:
     tag: lts
 
   installPlugins: []
+
+  jenkinsOpts: "--httpPort=8080 --httpsPort=-1"
