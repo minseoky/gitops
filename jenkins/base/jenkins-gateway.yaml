@@ -4,20 +4,9 @@ metadata:
   name: jenkins-gateway
   namespace: jenkins
 spec:
-  hostnames:
-    - jenkins.minseoky.me
-  parentRefs:
-    - group: gateway.networking.k8s.io
-      kind: Gateway
-      name: jenkins-gateway
-  rules:
-    - backendRefs:
-        - group: ''
-          kind: Service
-          name: jenkins
-          port: 8080
-          weight: 1
-      matches:
-        - path:
-            type: PathPrefix
-            value: /
+  gatewayClassName: istio  # 혹은 nginx 등 사용 중인 GatewayClass 이름
+  listeners:
+    - name: http
+      protocol: HTTP
+      port: 80
+      hostname: jenkins.minseoky.me

@@ -6,8 +6,9 @@ metadata:
 spec:
   parentRefs:
     - name: jenkins-gateway
+      namespace: jenkins  # 명시해주는 것이 좋음
   hostnames:
-    - "jenkins.minseoky.me"
+    - jenkins.minseoky.me
   rules:
     - matches:
         - path:
