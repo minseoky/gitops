@@ -4,12 +4,20 @@ metadata:
   name: jenkins-gateway
   namespace: jenkins
 spec:
-  gatewayClassName: istio
-  listeners:
-    - name: http
-      protocol: HTTP
-      port: 80
-      hostname: "jenkins.minseoky.me"
-      allowedRoutes:
-        namespaces:
-          from: Same
+  hostnames:
+    - jenkins.minseoky.me
+  parentRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: jenkins-gateway
+  rules:
+    - backendRefs:
+        - group: ''
+          kind: Service
+          name: jenkins
+          port: 8080
+          weight: 1
+      matches:
+        - path:
+            type: PathPrefix
+            value: /
