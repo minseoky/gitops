@@ -2,3 +2,4 @@ resources:
   - argocd/argocd/application.yaml
   - argocd/istio-system/application.yaml
   - argocd/jenkins/application.yaml
+  - argocd/cert-manager/application.yaml
