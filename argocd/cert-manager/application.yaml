@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-org/your-gitops-repo.git
+    repoURL: https://github.com/minseoky/gitops.git
     targetRevision: HEAD
     path: cert-manager
     kustomize:
