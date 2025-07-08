@@ -5,8 +5,10 @@ metadata:
   namespace: jenkins
 spec:
   parentRefs:
-    - name: jenkins-gateway
-      namespace: jenkins  # 명시해주는 것이 좋음
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: jenkins-gateway
+      namespace: jenkins
   hostnames:
     - jenkins.minseoky.me
   rules:
@@ -15,5 +17,7 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: jenkins
+        - group: ""
+          kind: Service
+          name: jenkins
           port: 8080
