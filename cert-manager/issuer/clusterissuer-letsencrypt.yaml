@@ -10,5 +10,7 @@ spec:
       name: letsencrypt-prod-account-key
     solvers:
       - http01:
-          ingress:
-            class: istio
+          gatewayHTTPRoute:
+            parentRefs:
+              - name: jenkins-gateway       # 너의 Gateway 리소스 이름
+                namespace: jenkins          # Gateway가 속한 네임스페이스
