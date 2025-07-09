@@ -14,5 +14,3 @@ helmCharts:
 
 resources:
   - namespace.yaml
-  - cainjector-leaderelection.yaml
-  - controller-leaderelection.yaml
