@@ -14,3 +14,88 @@ helmCharts:
 
 resources:
   - namespace.yaml
+
+# 리소스간 순서 보장
+patches:
+  # CRDs에 sync-wave: "0" 적용 (가장 먼저 배포)
+  - target:
+      kind: CustomResourceDefinition
+      name: certificates.cert-manager.io
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+  - target:
+      kind: CustomResourceDefinition
+      name: certificaterequests.cert-manager.io
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+  - target:
+      kind: CustomResourceDefinition
+      name: clusterissuers.cert-manager.io
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+  - target:
+      kind: CustomResourceDefinition
+      name: issuers.cert-manager.io
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+  - target:
+      kind: CustomResourceDefinition
+      name: orders.acme.cert-manager.io
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+  - target:
+      kind: CustomResourceDefinition
+      name: challenges.acme.cert-manager.io
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+
+  # cert-manager 컨트롤러 Deployment와 Webhook Service에 sync-wave: "0" 적용
+  - target:
+      kind: Deployment
+      name: cert-manager
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+  - target:
+      kind: Deployment
+      name: cert-manager-webhook
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+  - target:
+      kind: Service
+      name: cert-manager-webhook
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "0"
+
+  # ValidatingWebhookConfiguration과 MutatingWebhookConfiguration에 sync-wave: "1" 적용 (CRD 및 서비스 이후 배포)
+  - target:
+      kind: ValidatingWebhookConfiguration
+      name: cert-manager-webhook
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "1"
+  - target:
+      kind: MutatingWebhookConfiguration
+      name: cert-manager-webhook
+    patch: |-
+      - op: add
+        path: /metadata/annotations/argocd.argoproj.io~1sync-wave
+        value: "1"
