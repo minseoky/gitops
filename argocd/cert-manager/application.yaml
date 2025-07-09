@@ -26,4 +26,9 @@ spec:
       - Replace=true
       - AddOwnerRef=true
       - PruneLast=true
-
+    retry: # 이 부분을 추가합니다.
+      limit: 5 # 최대 재시도 횟수
+      backoff:
+        duration: 10s # 첫 번째 재시도까지 10초 대기
+        factor: 2 # 다음 재시도까지 대기 시간을 두 배로 늘림 (10s, 20s, 40s, ...)
+        maxDuration: 2m # 최대 대기 시간
