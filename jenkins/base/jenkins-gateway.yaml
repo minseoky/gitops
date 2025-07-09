@@ -6,7 +6,13 @@ metadata:
 spec:
   gatewayClassName: istio  # 혹은 nginx 등 사용 중인 GatewayClass 이름
   listeners:
-    - name: http
+    - name: https
       protocol: HTTP
-      port: 80
+      port: 443
       hostname: jenkins.minseoky.me
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: jenkins-cert
+            group: ""
