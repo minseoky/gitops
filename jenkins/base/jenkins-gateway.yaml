@@ -7,7 +7,7 @@ spec:
   gatewayClassName: istio  # 혹은 nginx 등 사용 중인 GatewayClass 이름
   listeners:
     - name: https
-      protocol: HTTP
+      protocol: HTTPS
       port: 443
       hostname: jenkins.minseoky.me
       tls:
@@ -16,3 +16,7 @@ spec:
           - kind: Secret
             name: jenkins-cert
             group: ""
+    - name: http
+      protocol: HTTP
+      port: 80
+      hostname: jenkins.minseoky.me
