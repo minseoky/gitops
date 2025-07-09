@@ -4,13 +4,16 @@ metadata:
   name: letsencrypt-prod
 spec:
   acme:
-    email: minseok184@gmail.com
     server: https://acme-v02.api.letsencrypt.org/directory
+    email: your-email@example.com  # 실제 이메일로 교체
     privateKeySecretRef:
-      name: letsencrypt-prod-account-key
+      name: letsencrypt-prod-private-key
     solvers:
       - http01:
           gatewayHTTPRoute:
             parentRefs:
-              - name: jenkins-gateway       # 너의 Gateway 리소스 이름
-                namespace: jenkins          # Gateway가 속한 네임스페이스
+              - name: jenkins-gateway
+                namespace: jenkins
+            serviceType: ClusterIP
+            serviceName: istio-ingressgateway
+            port: 80

@@ -4,12 +4,16 @@ metadata:
   name: jenkins-cert
   namespace: jenkins
 spec:
-  secretName: jenkins-cert  # Gateway에서 참조할 이름
-  duration: 2160h
-  renewBefore: 360h
-  commonName: jenkins.minseoky.me
-  dnsNames:
-    - jenkins.minseoky.me
+  secretName: jenkins-cert
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
+  commonName: jenkins.minseoky.me
+  dnsNames:
+    - jenkins.minseoky.me
+  privateKey:
+    algorithm: RSA
+    size: 2048
+  usages:
+    - digital signature
+    - key encipherment
