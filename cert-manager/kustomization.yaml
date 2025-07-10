@@ -1,4 +1,4 @@
 resources:
 - base
-- certificate
-- issuer
+  #- certificate
+  #- issuer
