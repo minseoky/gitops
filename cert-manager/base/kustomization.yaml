@@ -14,4 +14,3 @@ helmCharts:
 resources:
   - https://github.com/cert-manager/cert-manager/releases/download/v1.18.2/cert-manager.crds.yaml
   - namespace.yaml
-  - clusterrolebinding.yaml
