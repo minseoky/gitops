@@ -12,6 +12,11 @@ spec:
       - http01:
           # Gateway API를 위한 올바른 필드 구성
           gateway:
+            route:
+              match:
+                path:
+                  type: PathPrefix
+                  value: /.well-known/acme-challenge/
             reference:
               group: gateway.networking.k8s.io
               kind: Gateway # 또는 HTTPRoute (어떤 Gateway API 리소스를 참조하는지에 따라 다름)
