@@ -3,6 +3,7 @@ prometheus:
 
 
 extraArgs:
+  - --feature-gates=ExperimentalGatewayAPISupport=true
   - --leader-election-namespace=cert-manager
 
 cainjector:
