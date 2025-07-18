@@ -16,7 +16,13 @@ spec:
           - kind: Secret
             name: jenkins-cert
             group: ""
+      allowedRoutes:
+        namespaces:
+          from: All
     - name: http
       protocol: HTTP
       port: 80
       hostname: jenkins.minseoky.me
+      allowedRoutes:
+        namespaces:
+          from: All
