@@ -10,15 +10,9 @@ spec:
       name: letsencrypt-prod-private-key
     solvers:
       - http01:
-          # Gateway API를 위한 올바른 필드 구성
-          gateway:
-            route:
-              match:
-                path:
-                  type: PathPrefix
-                  value: /.well-known/acme-challenge/
-            reference:
-              group: gateway.networking.k8s.io
+          gatewayHTTPRoute:
+            parentRefs:
+            - group: gateway.networking.k8s.io
               kind: Gateway # 또는 HTTPRoute (어떤 Gateway API 리소스를 참조하는지에 따라 다름)
               name: jenkins-gateway # 참조할 Gateway 또는 HTTPRoute의 이름
               namespace: jenkins # 참조할 Gateway 또는 HTTPRoute의 네임스페이스
