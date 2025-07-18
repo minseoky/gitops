@@ -1,5 +1,10 @@
 prometheus:
   enabled: false
+
+
+extraArgs:
+  - --leader-election-namespace=cert-manager
+
 cainjector:
   extraArgs:
     - --leader-election-namespace=cert-manager
