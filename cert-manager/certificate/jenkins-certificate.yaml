@@ -1,16 +1,16 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: minseoky-cert
+  name: jenkins-cert
   namespace: cert-manager
 spec:
-  secretName: minseoky-cert
+  secretName: jenkins-cert
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: '*.minseoky.me'
+  commonName: 'jenkins.minseoky.me'
   dnsNames:
-    - '*.minseoky.me'
+    - 'jenkins.minseoky.me'
   privateKey:
     algorithm: RSA
     size: 2048
