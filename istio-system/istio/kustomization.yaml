@@ -14,3 +14,4 @@ helmCharts:
 resources:
   - namespace.yaml
   - gateway-api-crds.yaml
+  - minseoky-gateway.yaml

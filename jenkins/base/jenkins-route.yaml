@@ -7,8 +7,8 @@ spec:
   parentRefs:
     - group: gateway.networking.k8s.io
       kind: Gateway
-      name: jenkins-gateway
-      namespace: jenkins
+      name: minseoky-gateway
+      namespace: istio
   hostnames:
     - jenkins.minseoky.me
   rules:

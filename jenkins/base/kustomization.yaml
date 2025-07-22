@@ -13,5 +13,4 @@ helmCharts:
 
 resources:
   - namespace.yaml
-  - jenkins-gateway.yaml
   - jenkins-route.yaml

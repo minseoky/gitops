@@ -1,8 +1,8 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
-  name: jenkins-gateway
-  namespace: jenkins
+  name: minseoky-gateway
+  namespace: istio
 spec:
   gatewayClassName: istio  # 혹은 nginx 등 사용 중인 GatewayClass 이름
   listeners:
