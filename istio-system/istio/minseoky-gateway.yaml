@@ -9,12 +9,13 @@ spec:
     - name: https
       protocol: HTTPS
       port: 443
-      hostname: jenkins.minseoky.me
+      hostname: '*.minseoky.me'
       tls:
         mode: Terminate
         certificateRefs:
           - kind: Secret
-            name: jenkins-cert
+            name: minseoky-cert
+            namespace: cert-manager
             group: ""
       allowedRoutes:
         namespaces:
@@ -22,7 +23,7 @@ spec:
     - name: http
       protocol: HTTP
       port: 80
-      hostname: jenkins.minseoky.me
+      hostname: '*.minseoky.me'
       allowedRoutes:
         namespaces:
           from: All
