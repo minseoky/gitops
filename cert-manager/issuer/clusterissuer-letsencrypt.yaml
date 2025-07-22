@@ -14,5 +14,5 @@ spec:
             parentRefs:
             - group: gateway.networking.k8s.io
               kind: Gateway # 또는 HTTPRoute (어떤 Gateway API 리소스를 참조하는지에 따라 다름)
-              name: jenkins-gateway # 참조할 Gateway 또는 HTTPRoute의 이름
-              namespace: jenkins # 참조할 Gateway 또는 HTTPRoute의 네임스페이스
+              name: minseoky-gateway # 참조할 Gateway 또는 HTTPRoute의 이름
+              namespace: istio  # 참조할 Gateway 또는 HTTPRoute의 네임스페이스
