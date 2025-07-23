@@ -17,3 +17,4 @@ resources:
   - minseoky-gateway.yaml
   - jenkins-route.yaml
   - argocd-route.yaml
+  - crds.yaml

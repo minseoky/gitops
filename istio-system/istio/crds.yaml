@@ -1,0 +1,2 @@
+resources:
+  - https://raw.githubusercontent.com/istio/istio/release-1.22/manifests/charts/base/crds/crd-all.gen.yaml
