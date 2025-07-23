@@ -20,5 +20,6 @@ spec:
         - group: ""
           kind: Service
           name: jenkins
+          namespace: jenkins
           port: 8080
           weight: 1
