@@ -2,7 +2,7 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
   name: minseoky-gateway
-  namespace: istio
+  namespace: istio-system
 spec:
   gatewayClassName: istio  # 혹은 nginx 등 사용 중인 GatewayClass 이름
   listeners:
