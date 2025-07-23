@@ -15,6 +15,5 @@ resources:
   - namespace.yaml
   - gateway-api-crds.yaml
   - minseoky-gateway.yaml
-  - jenkins-route.yaml
-  - argocd-route.yaml
-  - crds.yaml
+    #- jenkins-route.yaml
+    #- argocd-route.yaml
