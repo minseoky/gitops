@@ -13,13 +13,8 @@ spec:
         mode: Terminate
         certificateRefs:
           - kind: Secret
-            name: jenkins-cert
+            name: wildcard-minseoky-me
             namespace: cert-manager
-            group: ""
-          - kind: Secret
-            name: argocd-cert
-            namespace: cert-manager
-            group: ""
       allowedRoutes:
         namespaces:
           from: All

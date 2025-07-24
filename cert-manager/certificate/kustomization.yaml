@@ -1,3 +1,4 @@
 resources:
-- jenkins-certificate.yaml 
-- argocd-certificate.yaml
+  #- jenkins-certificate.yaml 
+  #- argocd-certificate.yaml
+- wildcard-certificate.yaml
