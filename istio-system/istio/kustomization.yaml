@@ -19,4 +19,4 @@ resources:
   - argocd-route.yaml
     # - jenkins-reference-grant.yaml
     #- argocd-reference-grant.yaml
-  - secret-referencegrant.yaml
+  - secret-reference-grant.yaml
