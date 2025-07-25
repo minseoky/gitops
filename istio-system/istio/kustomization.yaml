@@ -17,6 +17,3 @@ resources:
   - minseoky-gateway.yaml
   - jenkins-route.yaml
   - argocd-route.yaml
-    # - jenkins-reference-grant.yaml
-    #- argocd-reference-grant.yaml
-  - secret-reference-grant.yaml
