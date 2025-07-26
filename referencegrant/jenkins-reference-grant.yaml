@@ -12,4 +12,3 @@ spec:
     - group: ""
       kind: Service
       name: jenkins
-      namespace: jenkins

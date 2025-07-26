@@ -13,6 +13,7 @@ spec:
         mode: Terminate
         certificateRefs:
           - kind: Secret
+            group: ''
             name: wildcard-minseoky-me
             namespace: cert-manager
       allowedRoutes:

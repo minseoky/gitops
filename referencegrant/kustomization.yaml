@@ -1,0 +1,5 @@
+resources:
+  - argocd-reference-grant.yaml
+  - jenkins-reference-grant.yaml
+  - secret-reference-grant.yaml
+
