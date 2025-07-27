@@ -1,3 +1,9 @@
 controller:
   admin:
+    existingSecret: jenkins-admin-secret
     username: admin
+    passwordKey: jenkins-admin-password
+  persistence:
+    enabled: true
+
+
