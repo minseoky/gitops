@@ -1,2 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: jenkins
+
+helmCharts:
+  - name: jenkins
+    repo: https://charts.jenkins.io
+    releaseName: jenkins
+    version: 5.8.66
+    namespace: jenkins
+    valuesFile: base/values.yaml
+
 resources:
-- base
+  - base/namespace.yaml
+
+
