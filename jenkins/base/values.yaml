@@ -1,3 +1,4 @@
 controller:
-  adminUser: admin
-  adminPassword: admininitpass12!@
+  admin:
+    username: admin
+    password: admininitpass12!@
