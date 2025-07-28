@@ -14,5 +14,6 @@ helmCharts:
 resources:
   - base/namespace.yaml
   - base/clusterrolebinding.yaml
+  - base/gradle-cache.yaml
 
 
